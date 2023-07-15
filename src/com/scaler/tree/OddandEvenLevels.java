@@ -3,8 +3,6 @@ package com.scaler.tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.scaler.adv.arrays.Solution;
-
 /*
  * Problem Description
 Given a binary tree of integers. Find the difference between the sum of nodes at odd level and sum of nodes at even level.
