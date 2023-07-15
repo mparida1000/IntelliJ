@@ -1,4 +1,4 @@
-package com.scaler.sdv.sorting;
+package com.scaler.adv.sorting;
 
 public class WaveArray {
 	private static int [] B;

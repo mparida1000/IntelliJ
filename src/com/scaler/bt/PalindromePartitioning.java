@@ -1,4 +1,4 @@
-package com.scaler.heap;
+package com.scaler.bt;
 
 import java.util.ArrayList;
 

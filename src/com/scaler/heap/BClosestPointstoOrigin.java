@@ -28,7 +28,6 @@ public class BClosestPointstoOrigin {
 	    }
 	    return res;
     }
-	
 	public static void main(String[] args) {
 		int [][] A = {
 				{1,1},

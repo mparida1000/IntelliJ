@@ -1,4 +1,4 @@
-package com.scaler.sdv.sorting;
+package com.scaler.adv.sorting;
 
 public class SearchforaRange {
 	public static int[] searchRange(final int[] A, int B) {		
