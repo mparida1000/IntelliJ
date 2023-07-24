@@ -1,9 +1,11 @@
 package com.scaler.graph;
 /*
  * Problem Description
-There are A islands and there are M bridges connecting them. Each bridge has some cost attached to it.
+There are A islands and there are M bridges connecting them. Each bridge has some cost
+* attached to it.
 We need to find bridges with minimal cost such that all islands are connected.
-It is guaranteed that input data will contain at least one possible scenario in which all islands are connected with each other.
+It is guaranteed that input data will contain at least one possible scenario in
+* which all islands are connected with each other.
 
 Input Format
 The first argument contains an integer, A, representing the number of islands.

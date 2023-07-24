@@ -6,9 +6,11 @@ import java.util.PriorityQueue;
 
 /*
  * Problem Description
-Given a graph with A nodes and C weighted edges. Cost of constructing the graph is the sum of weights of all the edges in the graph.
+Given a graph with A nodes and C weighted edges. Cost of constructing the graph is
+* the sum of weights of all the edges in the graph.
 
-Find the minimum cost of constructing the graph by selecting some given edges such that we can reach every other node from the 1st node.
+Find the minimum cost of constructing the graph by selecting
+* some given edges such that we can reach every other node from the 1st node.
 
 NOTE: Return the answer modulo 109+7 as the answer can be large.
  */
