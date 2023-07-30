@@ -1,5 +1,9 @@
 package com.scaler.tries;
-
+/*
+The time complexity for building the Trie is O(L), where L is the total length
+of all valid words. The time complexity for DFS on each cell remains O
+(MN). Therefore, the overall time complexity of the code is O(L + MN)
+ */
 import java.util.*;
 
 public class BoggleSolver {

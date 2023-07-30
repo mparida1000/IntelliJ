@@ -1,5 +1,7 @@
 package com.scaler.tries;
-
+/*
+The outer loop iterates over all cells in the board, which gives us a time complexity of O(M * N) to visit all cells
+ */
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
