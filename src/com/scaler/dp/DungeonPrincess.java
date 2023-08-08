@@ -1,6 +1,7 @@
 package com.scaler.dp;
 /**
  * Problem Description
+ * =-09asd
 The demons had captured the princess and imprisoned her in the bottom-right corner of a dungeon. 
 The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.
 
@@ -8,7 +9,7 @@ The knight has an initial health point represented by a positive integer.
 If at any point his health point drops to 0 or below, he dies immediately.
 
 Some of the rooms are guarded by demons, so the knight loses health (negative integers) upon entering these rooms; 
-other rooms are either empty (0's) or contain magic orbs that increase the knight's health (positive integers).
+other rooms are either empty (0's) or contain magic herbs that increase the knight's health (positive integers).
 
 In order to reach the princess as quickly as possible, the knight decides to move only rightward or downward in each step.
 
@@ -23,9 +24,11 @@ public class DungeonPrincess {
 		int m = A[0].length;
 		int [][] dp = new int [n][m];
 		dp[n-1][m-1] = Math.max(1-A[n-1][m-1], 1);
+		//last row
 		for(int i =  n-2 ; i >=0 ; i--){
 			dp[i][m-1] = Math.max(dp[i+1][m-1] - A[i][m-1], 1);
 		}
+		//last column
 		for(int i = m-2 ; i >=0 ; i--) {
 			dp[n-1][i] = Math.max(dp[n-1][i+1] - A[n-1][i], 1);
 		}

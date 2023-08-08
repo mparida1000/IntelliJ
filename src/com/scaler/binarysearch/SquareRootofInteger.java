@@ -35,7 +35,7 @@ public class SquareRootofInteger {
 	
 	public static void main(String[] args) {
 		long s = System.currentTimeMillis();
-		System.out.println(sqrt(900000000));
+		System.out.println(sqrt(50));
 		long e = System.currentTimeMillis();
 		System.out.println(e-s);
 	}

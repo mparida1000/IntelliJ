@@ -1,5 +1,14 @@
 package com.scaler.array;
+/*
+Problem Description
+Given a row-wise and column-wise sorted matrix A of size N * M.
+Return the maximum non-empty submatrix sum of this matrix.
 
+
+Problem Constraints
+1 <= N, M <= 1000
+-109 <= A[i][j] <= 109
+ */
 public class MaximumSubmatrixSum {
 	
 	public static long solve(int[][] A) {
@@ -35,7 +44,13 @@ public class MaximumSubmatrixSum {
 	}
 	
 	public static void main(String[] args) {
-		int [][] A = {{-57668}};
+		int [][] A = {
+				{1,2,-1,-4,-20},
+				{-8,-3,4,-2,1},
+				{3,8,9,1,3},
+				{-4,-1,1,7,-6},
+				{-2,-3,8,1,-1}
+		};
 		System.out.println(solve(A));
 	}
 

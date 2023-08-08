@@ -1,5 +1,13 @@
 package com.scaler.array;
-
+/**
+ * Problem Description
+ * Given a 2D integer matrix A of size N x N, find a B x B submatrix where B<= N and B>= 1,
+ * such that the sum of all the elements in the submatrix is maximum.
+ * Problem Constraints
+ * 1 <= N <= 103.
+ * 1 <= B <= N
+ * -102 <= A[i][j] <= 102.
+ */
 public class MaximumSumSquareSubMatrix {
 	public static int solve(int[][] A, int B) {
 		int n = A.length;
