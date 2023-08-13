@@ -31,8 +31,8 @@ public class BinaryTreeFromInorderAndPostorder {
 	}
 	
 	public static void main(String[] args) {
-		int [] A = {4,2,5,1,3};
-		int [] B = {4,5,2,3,1};
+		int [] A = {4,2,5,1,6,3,2};
+		int [] B = {4,5,2,6,7,3,1};
 		TreeNode root = buildTree(A, B);
 		inOrder(root);
 	}
