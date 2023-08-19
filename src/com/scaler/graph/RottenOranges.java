@@ -53,15 +53,17 @@ public class RottenOranges {
             if (!queue.isEmpty()) {
                 time++;
             }
+
         }        
         return fresh == 0 ? time : -1;
     }
 	
 	public static void main(String[] args) {
 		int [][] A = {
-				{2,1,1},
-				{1,1,0},
-				{0,1,1}
+				{1,2,0,0},
+				{1,1,1,0},
+				{0,1,2,1},
+                {2,1,0,0}
 		};
 		System.out.println(new RottenOranges().solve(A));
 	}

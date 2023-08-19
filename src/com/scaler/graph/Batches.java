@@ -17,9 +17,9 @@ Find the number of batches selected.
 NOTE: If student x and student y know each other, student y and z know each other then student x and student z will also know each other.
 
 Problem Constraints
-1 <= A <= 105
-1 <= M <= 2*105
-1 <= B[i] <= 104
+1 <= A <= 10^5
+1 <= M <= 2*10^5
+1 <= B[i] <= 10^4
 1 <= C[i][0], C[i][1] <= A
 1 <= D <= 109
  */

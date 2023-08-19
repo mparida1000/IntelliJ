@@ -4,18 +4,15 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-
 /*
  * Problem Description
 Given a 2-D board A of size N x M containing 'X' and 'O', capture all regions surrounded by 'X'.
-
 A region is captured by flipping all 'O's into 'X's in that surrounded region.
-
-
 
 Problem Constraints
 1 <= N, M <= 1000
  */
+
 public class CaptureRegionsOnBoard {
 	private static final int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 	public void solve(ArrayList<ArrayList<Character>> a) {
