@@ -39,7 +39,9 @@ public class LRUCache {
         
         return node.value;
     }
-    
+
+    //Update the value of the Key/node
+    //Or insert the new node, if capacity is full, remove from tail
     public void set(int key, int value) {
         if (map.containsKey(key)) {
             Node node = map.get(key);
@@ -57,11 +59,13 @@ public class LRUCache {
             addNode(node);
         }
     }
+    //remove the latest node read
     private void removeNode(Node node) {
         node.prev.next = node.next;
         node.next.prev = node.prev;
     }
-    
+
+    //Bring the latest node to the front
     private void addNode(Node node) {
         node.next = head.next;
         node.next.prev = node;

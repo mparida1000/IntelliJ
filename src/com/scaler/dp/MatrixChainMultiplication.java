@@ -26,7 +26,7 @@ public class MatrixChainMultiplication {
     }
 	
 	public static void main(String[] args) {
-		int [] A = {2,3,4,1,3};
+		int [] A = {2,4,3,2,1};
 		System.out.println(new MatrixChainMultiplication().solve(A));
 	}
 }
