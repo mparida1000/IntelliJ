@@ -25,7 +25,7 @@ public class LRUCache {
         this.head = new Node(0, 0);
         this.tail = new Node(0, 0);
         this.head.next = this.tail;
-        this.tail.prev = this.head;
+        this.tail.prev = this.head;   
     }
     
     public int get(int key) {
