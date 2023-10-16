@@ -6,7 +6,8 @@ of all valid words. The time complexity for DFS on each cell remains O
  */
 import java.util.*;
 
-public class BoggleSolver {
+public class
+BoggleSolver {
 	
 	static class TrieNode {
 	    Map<Character, TrieNode> children;
