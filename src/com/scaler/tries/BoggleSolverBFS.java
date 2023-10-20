@@ -2,7 +2,6 @@ package com.scaler.tries;
 /*
 The outer loop iterates over all cells in the board, which gives us a time complexity of O(M * N) to visit all cells
  */
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -74,7 +73,7 @@ public class BoggleSolverBFS {
         return (row >= 0 && row < rows && col >= 0 && col < cols);
     }
 
-    private @NotNull TrieNode buildTrie(Set<String> words) {
+    private TrieNode buildTrie(Set<String> words) {
         TrieNode root = new TrieNode();
         for (String word : words) {
             TrieNode node = root;

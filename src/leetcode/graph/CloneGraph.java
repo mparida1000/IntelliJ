@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CloneGraph {
     public Node cloneGraph(Node node) {
-
+        return null;
     }
 }
 class Node {
