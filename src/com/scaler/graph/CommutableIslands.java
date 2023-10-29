@@ -38,39 +38,30 @@ public class CommutableIslands {
             adjList.get(island1).add(new Bridge(island2, cost));
             adjList.get(island2).add(new Bridge(island1, cost));
         }
-
         // Create a visited array to keep track of visited islands
         boolean[] visited = new boolean[A + 1];
-
         // Create a priority queue to store the bridges in increasing order of their costs
         PriorityQueue<Bridge> pq = new PriorityQueue<>();
-
         // Start from island 1
         int startIsland = 1;
         visited[startIsland] = true;
-
         // Add all the bridges connected to the start island to the priority queue
         for (Bridge bridge : adjList.get(startIsland)) {
             pq.offer(bridge);
         }
-
         int minimalCost = 0;
-
         // Apply Prim's algorithm until all islands are visited
         while (!pq.isEmpty()) {
             Bridge bridge = pq.poll();
             int island = bridge.island;
             int cost = bridge.cost;
-
             // If the island is already visited, skip it
             if (visited[island]) {
                 continue;
             }
-
             // Mark the island as visited and add the cost to the minimal cost
             visited[island] = true;
             minimalCost += cost;
-
             // Add all the bridges connected to the visited island to the priority queue
             for (Bridge nextBridge : adjList.get(island)) {
                 pq.offer(nextBridge);
