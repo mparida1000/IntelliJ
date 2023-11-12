@@ -56,13 +56,18 @@ public class CheckBipartiteGraph {
 	
 	public static void main(String[] args) {
 		int [][] B = {
-				{0,1},
-				{0,2},
-				{3,4},
-				{0,4},
-				{3,5}
-		};
-		System.out.println(new CheckBipartiteGraph().solve(6, B));
+				{7,8},
+				{1,2},
+				{0,9},
+				{1,3},
+				{6,7},
+				{0,3},
+				{2,5},
+				{3,8},
+		{4,8}
+
+				};
+		System.out.println(new CheckBipartiteGraph().solve(10, B));
 	}
 
 }

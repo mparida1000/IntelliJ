@@ -32,7 +32,7 @@ public class NumbeOfIslands {
 		for(int i = 0 ; i < n ; i++) {
 			for(int j = 0 ; j < m ; j++) {
 				if(A[i][j] == 1 && !visited[i][j]) {
-					dfs(A, visited, i, j);
+					bfs(A, visited, i, j);
 					count++;
 				}
 			}
@@ -46,7 +46,7 @@ public class NumbeOfIslands {
 				(!visited[x][y] && arr[x][y] == 1);
 	}
 	
-	void dfs(int [][] arr, boolean [][] visited, int i, int j) {
+	void bfs(int [][] arr, boolean [][] visited, int i, int j) {
 		Queue<Pair> queue = new ArrayDeque<>();
 		queue.add(new Pair(i, j));
 		visited[i][j] = true;
