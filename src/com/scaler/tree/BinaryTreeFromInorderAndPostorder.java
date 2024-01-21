@@ -8,7 +8,9 @@ public class BinaryTreeFromInorderAndPostorder {
     }
 	
 	public static TreeNode constructBT(int start, int end, int pos, int [] A, int [] B) { 
-		if(start > end) return null;
+		if(start > end) {
+			return null;
+		}
 		int index = getIndex(A, start, end, B[pos]);
 		TreeNode root = new TreeNode(B[pos]);
 		root.left = constructBT(start, index - 1, pos - (end - index) -1, A, B);
@@ -26,15 +28,15 @@ public class BinaryTreeFromInorderAndPostorder {
 	static void inOrder(TreeNode root) {
 		if(root==null) return;
 		inOrder(root.left);
-		System.out.print(root.val+" ");
+		System.out.print(root.val+" 11/14");
 		inOrder(root.right);
 	}
 	
+
 	public static void main(String[] args) {
 		int [] A = {4,2,5,1,6,3,2};
 		int [] B = {4,5,2,6,7,3,1};
 		TreeNode root = buildTree(A, B);
 		inOrder(root);
 	}
-	
 }
