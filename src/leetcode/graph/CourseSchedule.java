@@ -42,23 +42,5 @@ public class CourseSchedule {
         stack.push(v);
     }
 
-    public static void main(String[] args) {
-        /*int [][] arr = {
-                {1,0},
-                {3,1},
-                {2,0},
-                {2,4},
-                {3,4},
-                {1,2}
-        };*/
 
-        int [][] arr = {
-                {0,3},
-                {3,2},
-                {2,0},
-                {1,0},
-                {1,4}
-        };
-        System.out.println(new CourseSchedule().canFinish(5, arr));
-    }
 }
