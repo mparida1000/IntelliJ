@@ -35,6 +35,20 @@ BoggleSolver {
         this.cols = board[0].length;
         this.visited = new boolean[rows][cols];
     }
+    private TrieNode buildTrie(Set<String> words) {
+        TrieNode root = new TrieNode();
+        for (String word : words) {
+            TrieNode node = root;
+            for (char c : word.toCharArray()) {
+                if (!node.children.containsKey(c)) {
+                    node.children.put(c, new TrieNode());
+                }
+                node = node.children.get(c);
+            }
+            node.isWord = true;
+        }
+        return root;
+    }
 
     public List<String> findAllWords() {
         for (int i = 0; i < rows; i++) {
@@ -74,20 +88,7 @@ BoggleSolver {
         return (row >= 0 && row < rows && col >= 0 && col < cols);
     }
 
-    private TrieNode buildTrie(Set<String> words) {
-        TrieNode root = new TrieNode();
-        for (String word : words) {
-            TrieNode node = root;
-            for (char c : word.toCharArray()) {
-                if (!node.children.containsKey(c)) {
-                	node.children.put(c, new TrieNode());
-                }                    
-                node = node.children.get(c);
-            }
-            node.isWord = true;
-        }
-        return root;
-    }
+
     public static void main(String[] args) {
         char[][] board = {
         		{'M', 'S', 'E', 'F'},

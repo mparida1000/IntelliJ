@@ -293,7 +293,7 @@ public class Tree {
 		if(head == mid) return node;
 		
 		node.left = convertSortedLinkedListToBST(head);
-		node.left = convertSortedLinkedListToBST(mid.next);
+		node.right = convertSortedLinkedListToBST(mid.next);
 		
 		return node;
 	}

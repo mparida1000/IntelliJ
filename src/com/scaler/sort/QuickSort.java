@@ -4,13 +4,17 @@ package com.scaler.sort;
 //Best case - O(nlogn)
 //Worst case - N2
 public class QuickSort {
-	static int[] a = {4,6,2,5,7,9,1,3};
+	static int[] a = {4,3,9,7,2,8,6};
 	public static int partition(int l, int h) {
 		int pivot = a[l];
 		int i = l, j = h;
 		while(i < j) {
-			while(a[i] <= pivot) i++;
-			while(a[j] > pivot) j--;
+			while(a[i] <= pivot) {
+				i++;
+			}
+			while(a[j] > pivot) {
+				j--;
+			}
 			if(i < j) {
 				swap(a, i, j);
 			}
