@@ -5,7 +5,6 @@ public class Water {
 	static int[] arr = {3,0,2,4,1,1,0,2};
 	public static void main(String[] args) {
 		System.out.println(totalWaterCollected());
-		
 	}
 	 static int totalWaterCollected() {
 		int N = arr.length;
