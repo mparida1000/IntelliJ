@@ -2,7 +2,7 @@ package leetcode.graph;
 
 public class SnakesAndLadders {
     public int snakesAndLadders(int[][] board) {
-        
+        return 0;
     }
 
     public static void main(String[] args) {

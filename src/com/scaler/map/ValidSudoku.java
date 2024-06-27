@@ -2,7 +2,18 @@ package com.scaler.map;
 
 import java.util.HashMap;
 import java.util.Map;
-
+/*
+Determine if a Sudoku is valid, according to: http://sudoku.com.au/TheRules.aspx
+The Sudoku board could be partially filled, where empty cells are filled with the character '.'.
+The input corresponding to the above configuration :
+["53..7....", "6..195...", ".98....6.", "8...6...3", "4..8.3..1", "7...2...6", ".6....28.", "...419..5", "....8..79"]
+A partially filled sudoku which is valid.
+Note:
+A valid Sudoku board (partially filled) is not necessarily solvable. Only the filled cells need to be validated.
+Return 0 / 1 ( 0 for false, 1 for true ) for this problem
+Expected Output
+Provide sample input and click run to see the correct output for the provided input. Use this to improve your problem understanding and test edge cases
+ */
 public class ValidSudoku {
 	public static int isValidSudoku(final String[] A) {
 		int [][] sudoku = new int[9][9];

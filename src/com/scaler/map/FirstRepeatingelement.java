@@ -2,7 +2,19 @@ package com.scaler.map;
 
 import java.util.HashMap;
 import java.util.Map;
+/*
+Problem Description
+Given an integer array A of size N, find the first repeating element in it.
+We need to find the element that occurs more than once and whose index of the first occurrence is the smallest.
+If there is no repeating element, return -1.
+Problem Constraints
+1 <= N <= 105
+1 <= A[i] <= 109
+Input Format
+The first and only argument is an integer array A of size N.
 
+
+ */
 public class FirstRepeatingelement {
 
 	public static int solve(int[] A) {

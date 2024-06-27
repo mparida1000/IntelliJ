@@ -2,7 +2,17 @@ package com.scaler.map;
 
 import java.util.HashMap;
 import java.util.Map;
+/*
+Problem Description
+You are given an array A of N integers. Return the count of elements with frequncy 1 in the given array.
+Problem Constraints
+1 <= N <= 105
+1 <= A[i] <= 109
 
+
+Input Format
+First argument A is an array of integers.
+ */
 public class Countuniqueelements {
 
 	public static int solve(int[] A) {

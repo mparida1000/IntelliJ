@@ -2,7 +2,24 @@ package com.scaler.map;
 
 import java.util.HashMap;
 import java.util.Map;
+/*
+Problem Description
+Given an array of positive integers A and an integer B, find and return first continuous subarray which adds to B.
 
+If the answer does not exist return an array with a single integer "-1".
+
+First sub-array means the sub-array for which starting index in minimum.
+
+Problem Constraints
+1 <= length of the array <= 100000
+1 <= A[i] <= 109
+1 <= B <= 109
+
+Input Format
+The first argument given is the integer array A.
+
+The second argument given is integer B.
+ */
 public class Subarraywithgivensum {
 	
 	public static int[] solve(int[] A, int B) {
@@ -39,7 +56,5 @@ public class Subarraywithgivensum {
 		for(int i = 0 ; i < a.length ; i++) {
 			System.out.print(a[i] + " ");
 		}
-		
 	}
-
 }
