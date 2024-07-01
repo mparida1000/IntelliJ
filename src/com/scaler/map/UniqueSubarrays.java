@@ -4,7 +4,8 @@ import java.util.HashSet;
 /*
 Problem Description
 
-Misha likes finding all Subarrays of an Array. Now she gives you an array A of N elements and told you to find the number of subarrays of A, that have unique elements.
+Misha likes finding all Subarrays of an Array. Now she gives you an array A of N elements and told you to
+find the number of subarrays of A, that have unique elements.
 
 Since the number of subarrays could be large, return value % 109 +7.
 Problem Constraints
@@ -15,7 +16,7 @@ Problem Constraints
 public class UniqueSubarrays {
     public static void main(String[] args) {
         // Example static array
-        int[] A = {1, 2, 1, 3, 4};
+        int[] A = {1, 2, 1, 3};
         int N = A.length;
 
         System.out.println(countUniqueSubarrays(A, N));

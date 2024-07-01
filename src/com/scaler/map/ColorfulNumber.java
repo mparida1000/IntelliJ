@@ -35,7 +35,7 @@ public class ColorfulNumber {
     }
 	
 	public static void main(String[] args) {
-		System.out.println(colorful(2634));
+		System.out.println(colorful(257346));
 	}
 
 }
