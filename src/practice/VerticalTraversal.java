@@ -5,33 +5,32 @@ import java.util.*;
 public class VerticalTraversal {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
-        Map<Integer, ArrayList<Integer>> map = new HashMap<>();
+        TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new TreeMap<>();
         Queue<Pair> queue = new LinkedList<>();
-        int minL = Integer.MAX_VALUE;
-        int maxL = Integer.MIN_VALUE;
-        queue.add(new Pair(root, 0, 0));
-        while (!queue.isEmpty()) {
+        queue.offer(new Pair(root, 0,0));
+        while(!queue.isEmpty()){
             Pair p = queue.poll();
-            if (!map.containsKey(p.hd)) {
-                ArrayList<Integer> lvlList = new ArrayList<>();
-                lvlList.add(p.node.val);
-                map.put(p.hd, lvlList);
-            } else {
-                map.get(p.hd).add(p.node.val);
+            TreeNode node = p.node;
+            int row = p.row;
+            int col = p.col;
+            map.putIfAbsent(col, new TreeMap<>());
+            map.get(col).putIfAbsent(row, new PriorityQueue<>());
+            map.get(col).get(row).offer(node.val);
+            if(node.left != null){
+                queue.offer(new Pair(node.left, row+1, col-1));
             }
-            if (p.node.left != null) {
-                queue.add(new Pair(p.node.left, p.hd - 1, p.vd + 1));
+            if(node.right != null){
+                queue.offer(new Pair(node.right, row+1, col+1));
             }
-            if (p.node.right != null) {
-                queue.add(new Pair(p.node.right, p.hd + 1, p.vd + 1));
-            }
-            minL = Math.min(minL, p.hd);
-            maxL = Math.max(maxL, p.hd);
         }
-
-        for (int i = minL; i <= maxL; i++) {
-            ArrayList<Integer> al = map.get(i);
-            result.add(al);
+        for(TreeMap<Integer, PriorityQueue<Integer>> rows : map.values()){
+            List<Integer> column = new ArrayList<>();
+            for(PriorityQueue<Integer> pq : rows.values()){
+                while(!pq.isEmpty()){
+                    column.add(pq.poll());
+                }
+            }
+            result.add(column);
         }
         return result;
     }
@@ -52,11 +51,11 @@ public class VerticalTraversal {
 
 class Pair{
     TreeNode node;
-    int hd;
-    int vd;
-    public Pair(TreeNode node, int hd, int vd){
+    int row;
+    int col;
+    public Pair(TreeNode node, int row, int col){
         this.node = node;
-        this.hd = hd;
-        this.vd = vd;
+        this.row = row;
+        this.col = col;
     }
 }
