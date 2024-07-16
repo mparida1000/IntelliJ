@@ -93,14 +93,14 @@ public class AlienDictionary {
     public static void main(String[] args) {
         AlienDictionary solution = new AlienDictionary();
 
-        String[] words1 = {"wrt","wrf","er","ett","rftt"};
-        System.out.println(solution.alienOrder(words1));  // Output: "wertf"
+       // String[] words1 = {"wrt","wrf","er","ett","rftt"};
+       // System.out.println(solution.alienOrder(words1));  // Output: "wertf"
 
-        String[] words2 = {"z","x"};
+        String[] words2 = {"abc","ab"};
         System.out.println(solution.alienOrder(words2));  // Output: "zx"
 
-        String[] words3 = {"z","x","z"};
-        System.out.println(solution.alienOrder(words3));  // Output: ""
+        //String[] words3 = {"z","x","z"};
+        //System.out.println(solution.alienOrder(words3));  // Output: ""
     }
 }
 
