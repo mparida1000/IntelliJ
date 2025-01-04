@@ -99,7 +99,8 @@ public class LinkedList {
 		prev.next = slowPointer.next;
 		return head;
 	}
-	
+
+	//Reverse LinkedList
 	static Node reverseList(Node head) {
 		if(head == null) {
 			return null;
