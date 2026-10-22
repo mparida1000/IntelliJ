@@ -17,10 +17,7 @@ Problem Constraints
 0 <= C < A
 0 <= D < A
  */
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class ShortestDistanceBetween2Nodes {
 	private static final int INF = Integer.MAX_VALUE;
@@ -30,7 +27,7 @@ public class ShortestDistanceBetween2Nodes {
         Arrays.fill(distances, INF);
         distances[C] = 0;
 
-        PriorityQueue<Node> minHeap = new PriorityQueue<>();
+        PriorityQueue<Node> minHeap = new PriorityQueue<>(Comparator.comparingInt(n->n.distance));
         minHeap.offer(new Node(C, 0));
 
         while (!minHeap.isEmpty()) {
@@ -89,7 +86,7 @@ public class ShortestDistanceBetween2Nodes {
     }
 
 }
-class Node implements Comparable<Node> {
+class Node  {
     int id;
     int distance;
 
@@ -98,8 +95,5 @@ class Node implements Comparable<Node> {
         this.distance = distance;
     }
 
-    @Override
-    public int compareTo(Node other) {
-        return Integer.compare(this.distance, other.distance);
-    }
+
 }

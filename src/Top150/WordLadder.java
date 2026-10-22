@@ -27,8 +27,8 @@ public class WordLadder {
                 for(int j = 0 ; j < word.length() ; j++){
                     char [] chars = word.toCharArray();
                     for(char c = 'a' ; c <= 'z'; c++ ){
-                        char originalChar = c;
-                        chars[j] = originalChar;
+                        char originalChar = chars[j];
+                        chars[j] = c;
                         String newWord = new String(chars);
                         if(newWord.equals(endWord)){
                             return level+1;
@@ -47,7 +47,8 @@ public class WordLadder {
     }
 
     public static void main(String[] args) {
-        List<String> wordList = Arrays.asList("hot","dot","dog","lot","log","cog");
+       // List<String> wordList = Arrays.asList("hot","dot","dog","lot","log","cog");
+        List<String> wordList = Arrays.asList("hot","hut","hug","hog","cog");
         System.out.println(new WordLadder().ladderLength("hit","cog", wordList));
     }
 }

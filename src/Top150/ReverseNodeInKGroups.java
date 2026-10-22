@@ -44,7 +44,7 @@ public class ReverseNodeInKGroups {
         head.next.next.next.next.next.next = new ListNode(7);
 
         ReverseNodeInKGroups sol = new ReverseNodeInKGroups();
-        ListNode result = sol.reverseKGroup(head, 4);
+        ListNode result = sol.reverseKGroup(head, 2);
 
         // Print the resulting list
         while (result != null) {
